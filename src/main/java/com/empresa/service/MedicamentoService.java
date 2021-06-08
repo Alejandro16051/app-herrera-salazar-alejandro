@@ -8,7 +8,7 @@ public interface MedicamentoService {
 
 	public abstract List<Medicamento> listaMedicamento();
 
-	public abstract List<Medicamento> listaMedicamentoPorNombre(String filtro);
+	public abstract List<Medicamento> listaMedicamentoPorNombre(String nombre);
 
 	public abstract List<Medicamento> obtienePorId(int idMedicamento);
 

@@ -26,6 +26,13 @@ public class MedicamentoController {
 		List<Medicamento> lista = service.listaMedicamento();
 		return ResponseEntity.ok(lista);
 	}
+	
+	@GetMapping("/porNombre/{filtro}")
+	@ResponseBody
+	public ResponseEntity<List<Medicamento>> listaPorNombre(@PathVariable("filtro") String nombre) {
+		List<Medicamento> lista = service.listaMedicamentoPorNombre(nombre);
+		return ResponseEntity.ok(lista);
+	}
 
 	@GetMapping("/porID/{id}")
 	@ResponseBody
@@ -36,7 +43,7 @@ public class MedicamentoController {
 
 	@GetMapping("/porLaboratorio/{laboratorio}")
 	@ResponseBody
-	public ResponseEntity<List<Medicamento>> listaPorMedicamento(@PathVariable("laboratorio") String laboratorio) {
+	public ResponseEntity<List<Medicamento>> listaPorLaboratorio(@PathVariable("laboratorio") String laboratorio) {
 		List<Medicamento> lista = service.listaPorLaboratorio(laboratorio);
 		return ResponseEntity.ok(lista);
 	}

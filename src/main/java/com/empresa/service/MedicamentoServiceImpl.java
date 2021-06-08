@@ -20,8 +20,8 @@ public class MedicamentoServiceImpl implements MedicamentoService {
 	}
 
 	@Override
-	public List<Medicamento> listaMedicamentoPorNombre(String filtro) {
-		return repository.listaMedicamentoPorNombre(filtro);
+	public List<Medicamento> listaMedicamentoPorNombre(String nombre) {
+		return repository.listaMedicamentoPorNombre(nombre);
 	}
 
 	@Override
