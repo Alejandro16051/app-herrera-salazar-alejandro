@@ -21,7 +21,7 @@ public class MedicamentoServiceImpl implements MedicamentoService {
 
 	@Override
 	public List<Medicamento> listaMedicamentoPorNombre(String nombre) {
-		return repository.listaMedicamentoPorNombre(nombre);
+		return repository.listaMedicamentoPorNombreLike(nombre);
 	}
 
 	@Override

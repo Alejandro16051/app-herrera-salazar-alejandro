@@ -11,7 +11,7 @@ import com.empresa.entity.Medicamento;
 public interface MedicamentoRepository extends JpaRepository<Medicamento, Integer> {
 
 	@Query("select a from Medicamento a where nombre like :fil")
-	public abstract List<Medicamento> listaMedicamentoPorNombre(@Param("fil") String nombre);
+	public abstract List<Medicamento> listaMedicamentoPorNombreLike(@Param("fil") String nombre);
 
 	public abstract List<Medicamento> findById(int idMedicamento);
 	public abstract List<Medicamento> findByLaboratorio(String laboratorio);
